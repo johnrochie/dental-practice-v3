@@ -1,20 +1,20 @@
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-[#f8fafc] via-white to-[#e0f2fe]/10 to-[#2563eb]/5)">
+    <section className="relative py-20 sm:py-28 lg:py-32 bg-gradient-to-br from-[#f8fafc] via-white to-[#e0f2fe]/10 to-[#2563eb]/5">
       <div className="absolute inset-0 z-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-[#e0f2fe]/30 to-[#2563eb]/5" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="py-12 sm:py-16 lg:py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1e293b] mb-6 leading-tight">
             Premium Dental Care
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-[#64748b] max-w-2xl mx-auto mb-8 sm:mb-10">
+          <p className="text-lg sm:text-xl md:text-2xl text-[#64748b] mb-8 sm:mb-10">
             Expert dentistry for you and your family
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 sm:mb-16">
             <a
               href="#contact"
               className="px-8 py-3 sm:py-4 bg-[#2563eb] hover:bg-[#38bdf8] text-white rounded-full font-semibold transition-all shadow-lg"
@@ -29,9 +29,9 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="p-6 sm:p-8 rounded-2xl border border-[#2563eb]/20 bg-white/50 shadow-lg max-w-md mx-auto mt-8 sm:mt-10">
+          <div className="p-6 sm:p-8 rounded-2xl border border-[#2563eb]/20 bg-white/50 shadow-lg max-w-md mx-auto mb-8 sm:mb-10">
             <div className="text-3xl mb-2">🎉</div>
-            <p className="font-semibold text-[#1e293b] text-xl">New Patients Special</p>
+            <p className="font-semibold text-[#1e293b] text-xl mb-2">New Patients Special</p>
             <p className="text-[#64748b] text-sm mb-4">
               Experience premium dental care at a special rate. First-time patients only.
             </p>
