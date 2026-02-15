@@ -1,10 +1,14 @@
 import type { Metadata } from 'next';
+import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
+
 export const metadata: Metadata = {
-  title: 'Premier Dental Care | Family-Friendly Dentistry',
-  description: 'Experienced dentists providing general, cosmetic, and emergency care. Modern technology, gentle care, 20% off for new patients.',
-  keywords: 'dental care, dentist, teeth whitening, braces, cosmetic dentistry, emergency dentist',
+  title: 'Premier Dental Care | Modern Dentistry in Dublin',
+  description: 'Expert dental care with modern technology. Cosmetic dentistry, orthodontics, emergency care. Book your appointment today.',
+  keywords: 'dental care, dentist Dublin, teeth whitening, braces, cosmetic dentistry, emergency dentist',
 };
 
 export default function RootLayout({
@@ -14,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="antialiased">
+      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

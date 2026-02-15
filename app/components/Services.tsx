@@ -1,73 +1,99 @@
+import { Activity, Sparkles, Smile, Phone, Baby, Stethoscope } from 'lucide-react';
+
 export default function Services() {
   const services = [
     {
-      icon: '🦷',
+      icon: Activity,
       title: 'General Dentistry',
-      description: 'Comprehensive care including cleanings, exams, and preventative treatments.',
-      details: 'Comprehensive exams & Professional cleaning',
+      description: 'Comprehensive exams, cleanings, and preventative care to keep your smile healthy.',
+      features: ['Regular checkups', 'Professional cleaning', 'X-rays & digital imaging'],
     },
     {
-      icon: '✨',
+      icon: Sparkles,
       title: 'Cosmetic Dentistry',
-      description: 'Teeth whitening, veneers, and smile makeovers for your perfect look.',
-      details: 'Smile makeovers & Whitening',
+      description: 'Transform your smile with teeth whitening, veneers, and smile makeovers.',
+      features: ['Teeth whitening', 'Porcelain veneers', 'Complete makeovers'],
     },
     {
-      icon: '😁',
+      icon: Smile,
       title: 'Orthodontics',
-      description: 'Braces, Invisalign, and alignment treatments for all ages.',
-      details: 'Braces & Alignments',
+      description: 'Straighten your teeth with modern braces and clear aligners for all ages.',
+      features: ['Traditional braces', 'Invisalign', 'Clear braces'],
     },
     {
-      icon: '🚑',
+      icon: Phone,
       title: 'Emergency Care',
-      description: 'Urgent dental services available when you need us most.',
-      details: 'Urgent care & 24/7 support',
+      description: 'Urgent dental issues treated quickly with same-day appointments available.',
+      features: ['Same-day appointments', 'Pain relief', 'Emergency repairs'],
     },
     {
-      icon: '👶',
+      icon: Baby,
       title: 'Children\'s Dentistry',
-      description: 'Specialized care for children in a friendly environment.',
-      details: 'Child-friendly & Gentle approach',
+      description: 'Gentle, child-friendly care in a welcoming, anxiety-free environment.',
+      features: ['Age-appropriate care', 'Behavioural guidance', 'Prevention focus'],
     },
     {
-      icon: '📅',
+      icon: Stethoscope,
       title: 'Preventive Care',
-      description: 'Regular checkups and preventative treatments to maintain oral health.',
-      details: 'Checkups & Dental hygiene',
+      description: 'Protect your oral health with regular checkups and personalized prevention plans.',
+      features: ['Dental hygiene', 'Fluoride treatments', 'Oral cancer screenings'],
     },
   ];
 
   return (
-    <section id="services" className="py-16 sm:py-20 lg:py-24 bg-white">
+    <section id="services" className="py-20 sm:py-24 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1e293b] mb-4">
-            Our Services
+        {/* Section Header */}
+        <div className="text-center mb-16 sm:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4 font-playfair">
+            Comprehensive Dental Services
           </h2>
-          <p className="text-[#64748b] text-lg max-w-2xl mx-auto">
-            Expert dental care for your entire family
+          <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto">
+            Everything you need for optimal oral health, all in one place
           </p>
         </div>
 
+        {/* Services Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="p-6 sm:p-8 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0] hover:shadow-xl hover:shadow-[#2563eb]/10 hover:border-[#2563eb]/20 transition-all duration-300"
+              className="group p-8 rounded-2xl bg-gradient-to-br from-white to-slate-50 border border-slate-100 hover:border-teal-200 hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300"
             >
-              <div className="text-5xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold text-[#1e293b] mb-2 hover:text-[#2563eb] transition-colors">
+              {/* Icon */}
+              <div className="w-14 h-14 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <service.icon className="w-7 h-7 text-white" />
+              </div>
+
+              {/* Content */}
+              <h3 className="text-xl font-bold text-slate-900 mb-3 font-playfair">
                 {service.title}
               </h3>
-              <p className="text-[#64748b] text-sm sm:text-base leading-relaxed mb-4">
+              <p className="text-slate-600 mb-4 leading-relaxed">
                 {service.description}
               </p>
-              <p className="text-[#2563eb]/70 text-sm font-medium">
-                {service.details}
-              </p>
+
+              {/* Features */}
+              <ul className="space-y-2">
+                {service.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-center gap-2 text-sm text-slate-500">
+                    <div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-16 text-center">
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white rounded-xl font-semibold transition-all duration-300 shadow-lg shadow-teal-900/10 hover:shadow-xl hover:shadow-teal-900/20"
+          >
+            Book Your Appointment Today
+          </a>
         </div>
       </div>
     </section>

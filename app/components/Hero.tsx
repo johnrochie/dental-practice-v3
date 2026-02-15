@@ -1,51 +1,69 @@
+import { Phone, Calendar, ShieldCheck, Award, Clock, Users } from 'lucide-react';
+
 export default function Hero() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-32 bg-gradient-to-br from-[#f8fafc] via-white to-[#e0f2fe]/10 to-[#2563eb]/5">
-      <div className="absolute inset-0 z-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-[#e0f2fe]/30 to-[#2563eb]/5" />
+    <section className="relative bg-gradient-to-br from-teal-50 via-white to-emerald-50 overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwZjc2N2UiIGZpbGwtb3BhY2l0eT0iMSI+PHBhdGggZD0iTTM2IDM0djEwSDI0VjM0aDEyem0wLTIwdjEwSDI0VjE0aDEyeiIvPjwvZz48L2c+PC9zdmc+')]"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1e293b] mb-6 leading-tight">
-            Premium Dental Care
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32">
+        <div className="max-w-3xl mx-auto text-center">
+          {/* Trust Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-50 border border-teal-200 mb-8">
+            <ShieldCheck className="w-4 h-4 text-teal-600" />
+            <span className="text-sm font-medium text-teal-700">
+              Trusted by 10,000+ patients since 2010
+            </span>
+          </div>
+
+          {/* Main Heading */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-6 leading-tight font-playfair">
+            Care You Can Trust.<br />
+            <span className="text-teal-600">Smile You Deserve.</span>
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-[#64748b] mb-8 sm:mb-10">
-            Expert dentistry for you and your family
+
+          <p className="text-lg sm:text-xl lg:text-2xl text-slate-600 mb-8 sm:mb-10 max-w-2xl mx-auto">
+            Modern dentistry meets compassionate care. From routine checkups to complete smile transformations.
           </p>
 
+          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 sm:mb-16">
             <a
               href="#contact"
-              className="px-8 py-3 sm:py-4 bg-[#2563eb] hover:bg-[#38bdf8] text-white rounded-full font-semibold transition-all shadow-lg"
+              className="group px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white rounded-xl font-semibold transition-all duration-300 shadow-lg shadow-teal-900/10 hover:shadow-xl hover:shadow-teal-900/20 flex items-center gap-2"
             >
+              <Calendar className="w-5 h-5" />
               Book Appointment
             </a>
             <a
-              href="#services"
-              className="px-8 py-3 sm:py-4 border-2 border-[#2563eb] text-[#2563eb] hover:bg-[#2563eb] hover:text-[#0f172a] rounded-full font-semibold transition-all"
+              href="tel:+35312345678"
+              className="group px-8 py-4 bg-white hover:bg-slate-50 text-slate-900 border-2 border-slate-200 hover:border-teal-200 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2"
             >
-              Our Services
+              <Phone className="w-5 h-5" />
+              Call Now
             </a>
           </div>
 
-          <div className="p-6 sm:p-8 rounded-2xl border border-[#2563eb]/20 bg-white/50 shadow-lg max-w-md mx-auto mb-8 sm:mb-10">
-            <div className="text-3xl mb-2">🎉</div>
-            <p className="font-semibold text-[#1e293b] text-xl mb-2">New Patients Special</p>
-            <p className="text-[#64748b] text-sm mb-4">
-              Experience premium dental care at a special rate. First-time patients only.
-            </p>
-            <a
-              href="#contact"
-              className="w-full block py-2 sm:py-3 bg-[#2563eb] hover:bg-[#38bdf8] text-white rounded-lg font-semibold transition-all"
-            >
-              Claim Offer
-            </a>
-          </div>
-
-          <div className="flex justify-center items-center gap-4 p-4 rounded-2xl bg-[#f8fafc] border border-[#e0f2fe]/30 max-w-md mx-auto">
-            <div className="text-blue-600 font-semibold text-sm">24/7 Support</div>
-            <div className="text-slate-400 text-xs">(Urgent dental issues)</div>
+          {/* Trust Stats */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl font-bold text-teal-600 mb-1">15+</div>
+              <div className="text-sm text-slate-600">Years Experience</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl font-bold text-teal-600 mb-1">10K+</div>
+              <div className="text-sm text-slate-600">Happy Patients</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl font-bold text-teal-600 mb-1">4.9</div>
+              <div className="text-sm text-slate-600">Google Rating</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl font-bold text-teal-600 mb-1">24/7</div>
+              <div className="text-sm text-slate-600">Emergency Care</div>
+            </div>
           </div>
         </div>
       </div>
