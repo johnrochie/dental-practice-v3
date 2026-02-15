@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+/* Custom dental brand colors in Tailwind config */
+@theme {
+  --color-primary: 2563eb;
+  --color-secondary: 38bdf8;
+}
