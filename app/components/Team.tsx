@@ -7,18 +7,21 @@ export default function Team() {
       title: 'Principal Dentist',
       description: 'Leading our practice with 15 years of expertise in restorative and cosmetic dentistry.',
       email: 'sarah@premierdental.ie',
+      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&h=750',
     },
     {
       name: 'Dr. Michael Walsh',
       title: 'Orthodontist',
       description: 'Specialist in clear aligners and modern orthodontics for patients of all ages.',
       email: 'michael@premierdental.ie',
+      image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&h=750',
     },
     {
       name: 'Dr. Emma Chen',
       title: 'Cosmetic Dentist',
       description: 'Expert in smile transformations with advanced aesthetic dentistry techniques.',
       email: 'emma@premierdental.ie',
+      image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=600&h=750',
     },
   ];
 
@@ -40,15 +43,13 @@ export default function Team() {
               key={member.name}
               className="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-teal-200 hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300"
             >
-              {/* Image placeholder */}
+              {/* Image */}
               <div className="aspect-[4/3] bg-gradient-to-br from-teal-100 to-emerald-100 relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-32 h-32 bg-white/80 rounded-full flex items-center justify-center">
-                    <span className="text-4xl font-bold text-teal-600">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                </div>
+                <img
+                  src={member.image}
+                  alt={`Dr. ${member.name.split(' ')[1]}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
 
